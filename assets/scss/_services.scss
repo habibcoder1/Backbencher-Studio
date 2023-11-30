@@ -1,0 +1,206 @@
+// Service Pages
+
+
+
+// single service //
+.single_service-area{
+    background-color: #0A090F;
+    padding: 130px 0 100px;
+    @media(max-width: 992px){
+        padding: 80px 0 60px;
+    }
+    @media(max-width: 768px){
+        padding: 60px 0 50px;
+    }
+    .single-service_details{
+        .service-thumbnail{
+            img{
+                width: 100%;
+                height: auto;
+                border-radius: 30px;
+                -webkit-border-radius: 30px;
+                -moz-border-radius: 30px;
+                -ms-border-radius: 30px;
+                -o-border-radius: 30px;
+            }
+        }
+        .service-title_btn{
+            padding: 80px 0;
+            @media(max-width: 992px){
+                padding: 50px 0;
+            }
+            .service-title{
+                h2{
+                    color: $bbsWhiteColor;
+                    font-size: 68px;
+                    font-weight: 600;
+                    letter-spacing: -4.42px;
+                    text-transform: uppercase;
+                    @media(max-width: 1200px){
+                        font-size: 58px;
+                    }
+                    @media(max-width: 992px){
+                        font-size: 50px;
+                        letter-spacing: -2.42px;
+                    }
+                }
+            }
+            .serice-excerpt{
+                margin-top: 10px;
+                p{
+                    color: #8E8EA0;
+                    font-size: 30px;
+                    font-weight: 400;
+                    line-height: 42px;
+                    letter-spacing: 0.15px;
+                    @media(max-width: 1200px){
+                       font-size: 25px;
+                    }
+                    @media(max-width: 992px){
+                       font-size: 25px;
+                       line-height: 1.5em;
+                    }
+                }
+            }
+            .contact-btn{
+                @media(max-width: 768px){
+                    text-align: center !important;
+                    margin-top: 30px;
+                }
+                a{
+
+                }
+            }
+        }
+        // about project
+        .about-project{
+            padding: 80px 0;
+            .project-title{
+                h2{
+                    color: $bbsWhiteColor;
+                    font-size: 65px;
+                    font-weight: 600;
+                    letter-spacing: -4.42px;
+                    text-transform: uppercase;
+                    @media(max-width: 1200px){
+                        font-size: 58px;
+                    }
+                    @media(max-width: 992px){
+                        font-size: 45px;
+                        letter-spacing: -1px;
+                    }
+                }
+            }
+            .project-content_details{
+                p{
+                    color: $bbsWhiteColor;
+                    font-size: 65px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    letter-spacing: -2.695px;
+                    @media(max-width: 1200px){
+                        font-size: 55px;
+                    }
+                    @media(max-width: 992px){
+                        font-size: 42px;
+                        letter-spacing: -1px;
+                    }
+                    @media(max-width: 768px){
+                        margin-top: 20px;
+                    }
+                    @media(max-width: 500px){
+                        font-size: 35px;
+                    }
+                }
+                .project-peoples{
+                    display: flex;
+                    align-items: center;
+                    gap: 25px; 
+                    margin-top: 80px;
+                    @media(max-width: 500px){
+                        display: block;
+                        text-align: center;
+                    }
+                    .people-img{
+                        margin: 0;
+                        padding: 0;
+                        @media(max-width: 500px){
+                            margin-bottom: 15px;
+                        }
+                        li{
+                            display: inline-block;
+                            margin-left: -45px;
+                            &:first-child{
+                                margin-left: 0;
+                            }
+                            img{
+                                height: 92px;
+                                width: 92px;
+                                border: 1px solid $bbsBlackColor;
+                                border-radius: 50%;
+                                -webkit-border-radius: 50%;
+                                -moz-border-radius: 50%;
+                                -ms-border-radius: 50%;
+                                -o-border-radius: 50%;
+                                @media(max-width: 992px){
+                                    height: 65px;
+                                    width: 65px;
+                                }
+                            }
+                        } 
+                    }
+                    .contact-btn{
+                        a{
+                            color: $bbsSecondaryColor;
+                            font-size: 38px;
+                            font-weight: 400;
+                            letter-spacing: -0.95px;
+                            text-decoration-line: underline;
+                            -moz-text-decoration-line: underline;
+                            transition: .4s ease all;
+                            -webkit-transition: .4s ease all;
+                            -moz-transition: .4s ease all;
+                            -ms-transition: .4s ease all;
+                            -o-transition: .4s ease all;
+                            &:hover{
+                                color: $bbsPrimaryColor;
+                                text-decoration-line: none;
+                                -moz-text-decoration-line: none;
+                            }
+                            @media(max-width: 992px){
+                                font-size: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } 
+}
+
+// related blog
+.related-service{
+    background-color: #0A090F;
+    padding-bottom: 100px;
+    @media(max-width: 1200px){
+        padding-bottom: 60px;
+    }
+    .related-blog_items{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 40px;
+        @media(max-width: 1200px){
+            gap: 30px;
+        }
+        @media(max-width: 992px){
+            gap: 20px;
+        }
+        @media(max-width: 768px){
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+        .blog-box{
+ 
+        }
+    }
+}
