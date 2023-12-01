@@ -1,7 +1,5 @@
 blog page slider (try swiper js thumbs gallery loop or slick slider or email check)
-About Page Slider  (Swiper or slick for bottom to top)
 Service Page Drag and Drop (same as video sec. hover on image & btn)
-Home Page Slider Custom Cursor
 marque animation unlimited
 
 
@@ -13,7 +11,9 @@ Main Menu = Done
 single page = Done
 airplane animation = Done
 Mixitup for blog tab = Done
+About Page Slider = Done
+Home Page Slider Custom Cursor = Done
 
 
 What needs to include that folder::
-airplane animation, preloader, blog slider (need define how many post will show default), blog mixitup
+airplane animation, preloader, blog slider (need define how many post will show default), blog mixitup, About page slider, Home Page Slider Custom Cursor

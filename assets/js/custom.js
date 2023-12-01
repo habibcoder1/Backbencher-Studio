@@ -24,7 +24,7 @@
         const blogSlider = jQuery('.blog-slider');
         jQuery(blogSlider).slick({
             autoplay: true,
-            autoplaySpeed: 3000,
+            autoplaySpeed: 4000,
             infinite: true,
             speed: 800,
             slidesToShow: 1,
@@ -61,9 +61,42 @@
             progressBar.css('width', '0%');
         });
 
+        /* ========================
+            About Service Slider
+        ======================== */
+        jQuery('.aboutservice-slider ul').slick({
+            autoplay: true,
+            autoplaySpeed: 3000,
+            infinite: true,
+            speed: 800,
+            centerPadding: '10px',
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: false,
+            pauseOnHover: false,
+            vertical: true, 
+            verticalSwiping: true,
+        });
+        
+        /* ========================
+            Testimonial Slider
+        ======================== */
+        jQuery('.testimonial-details').slick({
+            autoplay: true,
+            autoplaySpeed: 4000,
+            infinite: true,
+            speed: 1000,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: false,
+            pauseOnHover: false,
+        });
+
         
        /* ==================
-            Blog Mixitup
+            Blog Mixitup (only load which page will set mixitup)
         ================== */
         var mixer = mixitup('.allblog-items');
         /* var mixer = mixitup(containerEl);
