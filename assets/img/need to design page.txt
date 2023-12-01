@@ -1,12 +1,19 @@
 blog page slider (try swiper js thumbs gallery loop or slick slider or email check)
-single page 
 About Page Slider  (Swiper or slick for bottom to top)
 Service Page Drag and Drop (same as video sec. hover on image & btn)
 Home Page Slider Custom Cursor
-Main Menu = with smothly open/close
 marque animation unlimited
+
 
 Hero title D color will apply = Done
 contact form = Done
 apply form = Done
 single service page = Done
+Main Menu = Done
+single page = Done
+airplane animation = Done
+Mixitup for blog tab = Done
+
+
+What needs to include that folder::
+airplane animation, preloader, blog slider (need define how many post will show default), blog mixitup

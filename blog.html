@@ -15,12 +15,15 @@
     <link rel="stylesheet" href="assets/css/all.min.css">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/slick.min.css">
     <link rel="stylesheet" href="assets/css/custom.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- preloader -->
-    <div id="preloader"></div>
+    <div id="preloader">
+        <img src="assets/img/favicon.png" alt="preloader-image">
+    </div>
     
     <!-- =========================
         Header Area Start
@@ -154,7 +157,93 @@
                             <p class="text-capitalize">3 min</p>
                         </div>
                     </article> <!-- end single item -->
+                    <!-- single slider -->
+                    <article class="single-item">
+                        <!-- thumb -->
+                        <div class="thumb-img">
+                            <a href="#" title="blog title">
+                                <img src="assets/img/thumbnail-big.png" alt="thumbnail-img">
+                            </a>
+                        </div>
+                        <!-- title -->
+                        <div class="blog-title">
+                            <a href="#"><h2 class="text-uppercase">Cross Channel Marketing</h2></a>
+                        </div>
+                        <!-- blog content -->
+                        <div class="blog-content">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem </p>
+                        </div>
+                        <!-- category -->
+                        <div class="category-name">
+                            <h4 class="text-uppercase">UI/UX</h4>
+                        </div>
+                        <!-- reading time -->
+                        <div class="reading-time">
+                            <p class="text-capitalize">3 min</p>
+                        </div>
+                    </article> <!-- end single item -->
+                    <!-- single slider -->
+                    <article class="single-item">
+                        <!-- thumb -->
+                        <div class="thumb-img">
+                            <a href="#" title="blog title">
+                                <img src="assets/img/thumbnail-big.png" alt="thumbnail-img">
+                            </a>
+                        </div>
+                        <!-- title -->
+                        <div class="blog-title">
+                            <a href="#"><h2 class="text-uppercase">Cross Channel Marketing</h2></a>
+                        </div>
+                        <!-- blog content -->
+                        <div class="blog-content">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem </p>
+                        </div>
+                        <!-- category -->
+                        <div class="category-name">
+                            <h4 class="text-uppercase">UI/UX</h4>
+                        </div>
+                        <!-- reading time -->
+                        <div class="reading-time">
+                            <p class="text-capitalize">3 min</p>
+                        </div>
+                    </article> <!-- end single item -->
+                    <!-- single slider -->
+                    <article class="single-item">
+                        <!-- thumb -->
+                        <div class="thumb-img">
+                            <a href="#" title="blog title">
+                                <img src="assets/img/thumbnail-big.png" alt="thumbnail-img">
+                            </a>
+                        </div>
+                        <!-- title -->
+                        <div class="blog-title">
+                            <a href="#"><h2 class="text-uppercase">Cross Channel Marketing</h2></a>
+                        </div>
+                        <!-- blog content -->
+                        <div class="blog-content">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem </p>
+                        </div>
+                        <!-- category -->
+                        <div class="category-name">
+                            <h4 class="text-uppercase">UI/UX</h4>
+                        </div>
+                        <!-- reading time -->
+                        <div class="reading-time">
+                            <p class="text-capitalize">3 min</p>
+                        </div>
+                    </article> <!-- end single item -->
                 </div>
+                 <!-- Counter Slider -->
+                <div class="slick-counter">
+                    <span class="current-slide d-block">01</span> <!-- we can use /, - or others here --> <span class="total-slides">05</span>
+                    <!-- here 5 item will be dynamic -->
+                </div>
+                 <!-- Progress Bar Container -->
+                 <div class="slick-progress_bar">
+                     <div class="progress-bar-container">
+                         <div class="progress_bar"></div>
+                     </div>
+                 </div>
             </div>
         </div>
     </section>
@@ -169,18 +258,146 @@
             <div class="category_blog-tab">
                 <!-- tab menu item -->
                 <ul class="tab-menuitem">
-                    <li><a href="#all" class="text-capitalize text-decoration-none">all</a></li>
-                    <li><a href="#uiux" class="text-capitalize text-decoration-none">ui/ux</a></li>
-                    <li><a href="#mobileapp" class="text-capitalize text-decoration-none">mobile app</a></li>
-                    <li><a href="#website" class="text-capitalize text-decoration-none">website</a></li>
-                    <li><a href="#development" class="text-capitalize text-decoration-none">development</a></li>
-                    <li><a href="#graphics" class="text-capitalize text-decoration-none">graphics</a></li>
-                    <li><a href="#motiondesign" class="text-capitalize text-decoration-none">motion design</a></li>
+                    <li data-filter="all">all</li>
+                    <li data-filter=".uiux">UI/UX</li>
+                    <li data-filter=".mobileapp">mobile app</li>
+                    <li data-filter=".website">website</li>
+                    <li data-filter=".development">development</li>
+                    <li data-filter=".graphics">graphics</li>
+                    <li data-filter=".motiondesign">motion design</li>
                 </ul>
                 <!-- blog items -->
                 <div class="allblog-items">
-                    <!-- all items -->
-                    <div id="all" class="blog-details">
+                    <!-- mobileapp -->
+                    <div  class="mobileapp mix blog-details">
+                        <!-- single item -->
+                        <article class="blog-box blog-item">
+                            <!-- thumb -->
+                            <div class="thumbnail">
+                                <a href="#" class="text-decoration-none" title="blog title">
+                                    <img src="assets/img/thumb2.png" alt="post-thumbnail">
+                                </a>
+                            </div>
+                            <!-- title -->
+                            <div class="post-title">
+                                <a href="#" class="text-decoration-none">
+                                    <h2 class="text-uppercase">Creative approach </h2>
+                                </a>
+                            </div>
+                            <!-- reading time -->
+                            <div class="reading-time">
+                                <p>05 min</p>
+                            </div>
+                            <!-- category -->
+                            <div class="categories">
+                                <a href="#" class="text-decoration-none">
+                                    <h3 class="text-uppercase dot-title">ux/ui design</h3>
+                                </a>
+                            </div>
+                        </article>
+                        <!-- single item -->
+                        <article class="blog-box blog-item">
+                            <!-- thumb -->
+                            <div class="thumbnail">
+                                <a href="#" class="text-decoration-none" title="blog title">
+                                    <img src="assets/img/thumb1.png" alt="post-thumbnail">
+                                </a>
+                            </div>
+                            <!-- title -->
+                            <div class="post-title">
+                                <a href="#" class="text-decoration-none">
+                                    <h2 class="text-uppercase">Creative approach </h2>
+                                </a>
+                            </div>
+                            <!-- reading time -->
+                            <div class="reading-time">
+                                <p>05 min</p>
+                            </div>
+                            <!-- category -->
+                            <div class="categories">
+                                <a href="#" class="text-decoration-none">
+                                    <h3 class="text-uppercase dot-title">ux/ui design</h3>
+                                </a>
+                            </div>
+                        </article>
+                        <!-- single item -->
+                        <article class="blog-box blog-item">
+                            <!-- thumb -->
+                            <div class="thumbnail">
+                                <a href="#" class="text-decoration-none" title="blog title">
+                                    <img src="assets/img/thumb2.png" alt="post-thumbnail">
+                                </a>
+                            </div>
+                            <!-- title -->
+                            <div class="post-title">
+                                <a href="#" class="text-decoration-none">
+                                    <h2 class="text-uppercase">Creative approach </h2>
+                                </a>
+                            </div>
+                            <!-- reading time -->
+                            <div class="reading-time">
+                                <p>05 min</p>
+                            </div>
+                            <!-- category -->
+                            <div class="categories">
+                                <a href="#" class="text-decoration-none">
+                                    <h3 class="text-uppercase dot-title">ux/ui design</h3>
+                                </a>
+                            </div>
+                        </article>
+                        <!-- single item -->
+                        <article class="blog-box blog-item">
+                            <!-- thumb -->
+                            <div class="thumbnail">
+                                <a href="#" class="text-decoration-none" title="blog title">
+                                    <img src="assets/img/thumb1.png" alt="post-thumbnail">
+                                </a>
+                            </div>
+                            <!-- title -->
+                            <div class="post-title">
+                                <a href="#" class="text-decoration-none">
+                                    <h2 class="text-uppercase">Creative approach </h2>
+                                </a>
+                            </div>
+                            <!-- reading time -->
+                            <div class="reading-time">
+                                <p>05 min</p>
+                            </div>
+                            <!-- category -->
+                            <div class="categories">
+                                <a href="#" class="text-decoration-none">
+                                    <h3 class="text-uppercase dot-title">ux/ui design</h3>
+                                </a>
+                            </div>
+                        </article>
+                        <!-- single item -->
+                        <article class="blog-box blog-item">
+                            <!-- thumb -->
+                            <div class="thumbnail">
+                                <a href="#" class="text-decoration-none" title="blog title">
+                                    <img src="assets/img/thumb2.png" alt="post-thumbnail">
+                                </a>
+                            </div>
+                            <!-- title -->
+                            <div class="post-title">
+                                <a href="#" class="text-decoration-none">
+                                    <h2 class="text-uppercase">Creative approach </h2>
+                                </a>
+                            </div>
+                            <!-- reading time -->
+                            <div class="reading-time">
+                                <p>05 min</p>
+                            </div>
+                            <!-- category -->
+                            <div class="categories">
+                                <a href="#" class="text-decoration-none">
+                                    <h3 class="text-uppercase dot-title">ux/ui design</h3>
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- uiux -->
+                    <div  class="uiux mix blog-details">
                         <!-- single item -->
                         <article class="blog-box blog-item">
                             <!-- thumb -->
@@ -407,239 +624,8 @@
                             </div>
                         </article>
                     </div>
-                    <!-- ui ux -->
-                    <div id="uiux" class="blog-details">
-                        <!-- single item -->
-                        <article class="blog-box blog-item">
-                            <!-- thumb -->
-                            <div class="thumbnail">
-                                <a href="#" class="text-decoration-none" title="blog title">
-                                    <img src="assets/img/thumb2.png" alt="post-thumbnail">
-                                </a>
-                            </div>
-                            <!-- title -->
-                            <div class="post-title">
-                                <a href="#" class="text-decoration-none">
-                                    <h2 class="text-uppercase">Creative approach </h2>
-                                </a>
-                            </div>
-                            <!-- reading time -->
-                            <div class="reading-time">
-                                <p>05 min</p>
-                            </div>
-                            <!-- category -->
-                            <div class="categories">
-                                <a href="#" class="text-decoration-none">
-                                    <h3 class="text-uppercase dot-title">ux/ui design</h3>
-                                </a>
-                            </div>
-                        </article>
-                        <!-- single item -->
-                        <article class="blog-box blog-item">
-                            <!-- thumb -->
-                            <div class="thumbnail">
-                                <a href="#" class="text-decoration-none" title="blog title">
-                                    <img src="assets/img/thumb1.png" alt="post-thumbnail">
-                                </a>
-                            </div>
-                            <!-- title -->
-                            <div class="post-title">
-                                <a href="#" class="text-decoration-none">
-                                    <h2 class="text-uppercase">Creative approach </h2>
-                                </a>
-                            </div>
-                            <!-- reading time -->
-                            <div class="reading-time">
-                                <p>05 min</p>
-                            </div>
-                            <!-- category -->
-                            <div class="categories">
-                                <a href="#" class="text-decoration-none">
-                                    <h3 class="text-uppercase dot-title">ux/ui design</h3>
-                                </a>
-                            </div>
-                        </article>
-                        <!-- single item -->
-                        <article class="blog-box blog-item">
-                            <!-- thumb -->
-                            <div class="thumbnail">
-                                <a href="#" class="text-decoration-none" title="blog title">
-                                    <img src="assets/img/thumb2.png" alt="post-thumbnail">
-                                </a>
-                            </div>
-                            <!-- title -->
-                            <div class="post-title">
-                                <a href="#" class="text-decoration-none">
-                                    <h2 class="text-uppercase">Creative approach </h2>
-                                </a>
-                            </div>
-                            <!-- reading time -->
-                            <div class="reading-time">
-                                <p>05 min</p>
-                            </div>
-                            <!-- category -->
-                            <div class="categories">
-                                <a href="#" class="text-decoration-none">
-                                    <h3 class="text-uppercase dot-title">ux/ui design</h3>
-                                </a>
-                            </div>
-                        </article>
-                        <!-- single item -->
-                        <article class="blog-box blog-item">
-                            <!-- thumb -->
-                            <div class="thumbnail">
-                                <a href="#" class="text-decoration-none" title="blog title">
-                                    <img src="assets/img/thumb1.png" alt="post-thumbnail">
-                                </a>
-                            </div>
-                            <!-- title -->
-                            <div class="post-title">
-                                <a href="#" class="text-decoration-none">
-                                    <h2 class="text-uppercase">Creative approach </h2>
-                                </a>
-                            </div>
-                            <!-- reading time -->
-                            <div class="reading-time">
-                                <p>05 min</p>
-                            </div>
-                            <!-- category -->
-                            <div class="categories">
-                                <a href="#" class="text-decoration-none">
-                                    <h3 class="text-uppercase dot-title">ux/ui design</h3>
-                                </a>
-                            </div>
-                        </article>
-                        <!-- single item -->
-                        <article class="blog-box blog-item">
-                            <!-- thumb -->
-                            <div class="thumbnail">
-                                <a href="#" class="text-decoration-none" title="blog title">
-                                    <img src="assets/img/thumb2.png" alt="post-thumbnail">
-                                </a>
-                            </div>
-                            <!-- title -->
-                            <div class="post-title">
-                                <a href="#" class="text-decoration-none">
-                                    <h2 class="text-uppercase">Creative approach </h2>
-                                </a>
-                            </div>
-                            <!-- reading time -->
-                            <div class="reading-time">
-                                <p>05 min</p>
-                            </div>
-                            <!-- category -->
-                            <div class="categories">
-                                <a href="#" class="text-decoration-none">
-                                    <h3 class="text-uppercase dot-title">ux/ui design</h3>
-                                </a>
-                            </div>
-                        </article>
-                    </div>
-                    <!-- mobileapp -->
-                    <div id="mobileapp" class="blog-details">
-                        <!-- single item -->
-                        <article class="blog-box blog-item">
-                            <!-- thumb -->
-                            <div class="thumbnail">
-                                <a href="#" class="text-decoration-none" title="blog title">
-                                    <img src="assets/img/thumb1.png" alt="post-thumbnail">
-                                </a>
-                            </div>
-                            <!-- title -->
-                            <div class="post-title">
-                                <a href="#" class="text-decoration-none">
-                                    <h2 class="text-uppercase">Creative approach </h2>
-                                </a>
-                            </div>
-                            <!-- reading time -->
-                            <div class="reading-time">
-                                <p>05 min</p>
-                            </div>
-                            <!-- category -->
-                            <div class="categories">
-                                <a href="#" class="text-decoration-none">
-                                    <h3 class="text-uppercase dot-title">ux/ui design</h3>
-                                </a>
-                            </div>
-                        </article>
-                        <!-- single item -->
-                        <article class="blog-box blog-item">
-                            <!-- thumb -->
-                            <div class="thumbnail">
-                                <a href="#" class="text-decoration-none" title="blog title">
-                                    <img src="assets/img/thumb2.png" alt="post-thumbnail">
-                                </a>
-                            </div>
-                            <!-- title -->
-                            <div class="post-title">
-                                <a href="#" class="text-decoration-none">
-                                    <h2 class="text-uppercase">Creative approach </h2>
-                                </a>
-                            </div>
-                            <!-- reading time -->
-                            <div class="reading-time">
-                                <p>05 min</p>
-                            </div>
-                            <!-- category -->
-                            <div class="categories">
-                                <a href="#" class="text-decoration-none">
-                                    <h3 class="text-uppercase dot-title">ux/ui design</h3>
-                                </a>
-                            </div>
-                        </article>
-                        <!-- single item -->
-                        <article class="blog-box blog-item">
-                            <!-- thumb -->
-                            <div class="thumbnail">
-                                <a href="#" class="text-decoration-none" title="blog title">
-                                    <img src="assets/img/thumb1.png" alt="post-thumbnail">
-                                </a>
-                            </div>
-                            <!-- title -->
-                            <div class="post-title">
-                                <a href="#" class="text-decoration-none">
-                                    <h2 class="text-uppercase">Creative approach </h2>
-                                </a>
-                            </div>
-                            <!-- reading time -->
-                            <div class="reading-time">
-                                <p>05 min</p>
-                            </div>
-                            <!-- category -->
-                            <div class="categories">
-                                <a href="#" class="text-decoration-none">
-                                    <h3 class="text-uppercase dot-title">ux/ui design</h3>
-                                </a>
-                            </div>
-                        </article>
-                    </div>
                     <!-- website -->
-                    <div id="website" class="blog-details">
-                        <!-- single item -->
-                        <article class="blog-box blog-item">
-                            <!-- thumb -->
-                            <div class="thumbnail">
-                                <a href="#" class="text-decoration-none" title="blog title">
-                                    <img src="assets/img/thumb2.png" alt="post-thumbnail">
-                                </a>
-                            </div>
-                            <!-- title -->
-                            <div class="post-title">
-                                <a href="#" class="text-decoration-none">
-                                    <h2 class="text-uppercase">Creative approach </h2>
-                                </a>
-                            </div>
-                            <!-- reading time -->
-                            <div class="reading-time">
-                                <p>05 min</p>
-                            </div>
-                            <!-- category -->
-                            <div class="categories">
-                                <a href="#" class="text-decoration-none">
-                                    <h3 class="text-uppercase dot-title">ux/ui design</h3>
-                                </a>
-                            </div>
-                        </article>
+                    <div class="website mix blog-details">
                         <!-- single item -->
                         <article class="blog-box blog-item">
                             <!-- thumb -->
@@ -696,31 +682,6 @@
                             <div class="thumbnail">
                                 <a href="#" class="text-decoration-none" title="blog title">
                                     <img src="assets/img/thumb1.png" alt="post-thumbnail">
-                                </a>
-                            </div>
-                            <!-- title -->
-                            <div class="post-title">
-                                <a href="#" class="text-decoration-none">
-                                    <h2 class="text-uppercase">Creative approach </h2>
-                                </a>
-                            </div>
-                            <!-- reading time -->
-                            <div class="reading-time">
-                                <p>05 min</p>
-                            </div>
-                            <!-- category -->
-                            <div class="categories">
-                                <a href="#" class="text-decoration-none">
-                                    <h3 class="text-uppercase dot-title">ux/ui design</h3>
-                                </a>
-                            </div>
-                        </article>
-                        <!-- single item -->
-                        <article class="blog-box blog-item">
-                            <!-- thumb -->
-                            <div class="thumbnail">
-                                <a href="#" class="text-decoration-none" title="blog title">
-                                    <img src="assets/img/thumb2.png" alt="post-thumbnail">
                                 </a>
                             </div>
                             <!-- title -->
@@ -742,7 +703,32 @@
                         </article>
                     </div>
                     <!-- development -->
-                    <div id="development" class="blog-details">
+                    <div class="development mix blog-details">
+                        <!-- single item -->
+                        <article class="blog-box blog-item">
+                            <!-- thumb -->
+                            <div class="thumbnail">
+                                <a href="#" class="text-decoration-none" title="blog title">
+                                    <img src="assets/img/thumb2.png" alt="post-thumbnail">
+                                </a>
+                            </div>
+                            <!-- title -->
+                            <div class="post-title">
+                                <a href="#" class="text-decoration-none">
+                                    <h2 class="text-uppercase">Creative approach </h2>
+                                </a>
+                            </div>
+                            <!-- reading time -->
+                            <div class="reading-time">
+                                <p>05 min</p>
+                            </div>
+                            <!-- category -->
+                            <div class="categories">
+                                <a href="#" class="text-decoration-none">
+                                    <h3 class="text-uppercase dot-title">ux/ui design</h3>
+                                </a>
+                            </div>
+                        </article>
                         <!-- single item -->
                         <article class="blog-box blog-item">
                             <!-- thumb -->
@@ -799,6 +785,31 @@
                             <div class="thumbnail">
                                 <a href="#" class="text-decoration-none" title="blog title">
                                     <img src="assets/img/thumb1.png" alt="post-thumbnail">
+                                </a>
+                            </div>
+                            <!-- title -->
+                            <div class="post-title">
+                                <a href="#" class="text-decoration-none">
+                                    <h2 class="text-uppercase">Creative approach </h2>
+                                </a>
+                            </div>
+                            <!-- reading time -->
+                            <div class="reading-time">
+                                <p>05 min</p>
+                            </div>
+                            <!-- category -->
+                            <div class="categories">
+                                <a href="#" class="text-decoration-none">
+                                    <h3 class="text-uppercase dot-title">ux/ui design</h3>
+                                </a>
+                            </div>
+                        </article>
+                        <!-- single item -->
+                        <article class="blog-box blog-item">
+                            <!-- thumb -->
+                            <div class="thumbnail">
+                                <a href="#" class="text-decoration-none" title="blog title">
+                                    <img src="assets/img/thumb2.png" alt="post-thumbnail">
                                 </a>
                             </div>
                             <!-- title -->
@@ -820,57 +831,7 @@
                         </article>
                     </div>
                     <!-- graphics -->
-                    <div id="graphics" class="blog-details">
-                        <!-- single item -->
-                        <article class="blog-box blog-item">
-                            <!-- thumb -->
-                            <div class="thumbnail">
-                                <a href="#" class="text-decoration-none" title="blog title">
-                                    <img src="assets/img/thumb2.png" alt="post-thumbnail">
-                                </a>
-                            </div>
-                            <!-- title -->
-                            <div class="post-title">
-                                <a href="#" class="text-decoration-none">
-                                    <h2 class="text-uppercase">Creative approach </h2>
-                                </a>
-                            </div>
-                            <!-- reading time -->
-                            <div class="reading-time">
-                                <p>05 min</p>
-                            </div>
-                            <!-- category -->
-                            <div class="categories">
-                                <a href="#" class="text-decoration-none">
-                                    <h3 class="text-uppercase dot-title">ux/ui design</h3>
-                                </a>
-                            </div>
-                        </article>
-                        <!-- single item -->
-                        <article class="blog-box blog-item">
-                            <!-- thumb -->
-                            <div class="thumbnail">
-                                <a href="#" class="text-decoration-none" title="blog title">
-                                    <img src="assets/img/thumb2.png" alt="post-thumbnail">
-                                </a>
-                            </div>
-                            <!-- title -->
-                            <div class="post-title">
-                                <a href="#" class="text-decoration-none">
-                                    <h2 class="text-uppercase">Creative approach </h2>
-                                </a>
-                            </div>
-                            <!-- reading time -->
-                            <div class="reading-time">
-                                <p>05 min</p>
-                            </div>
-                            <!-- category -->
-                            <div class="categories">
-                                <a href="#" class="text-decoration-none">
-                                    <h3 class="text-uppercase dot-title">ux/ui design</h3>
-                                </a>
-                            </div>
-                        </article>
+                    <div  class="graphics mix blog-details">
                         <!-- single item -->
                         <article class="blog-box blog-item">
                             <!-- thumb -->
@@ -927,81 +888,6 @@
                             <div class="thumbnail">
                                 <a href="#" class="text-decoration-none" title="blog title">
                                     <img src="assets/img/thumb1.png" alt="post-thumbnail">
-                                </a>
-                            </div>
-                            <!-- title -->
-                            <div class="post-title">
-                                <a href="#" class="text-decoration-none">
-                                    <h2 class="text-uppercase">Creative approach </h2>
-                                </a>
-                            </div>
-                            <!-- reading time -->
-                            <div class="reading-time">
-                                <p>05 min</p>
-                            </div>
-                            <!-- category -->
-                            <div class="categories">
-                                <a href="#" class="text-decoration-none">
-                                    <h3 class="text-uppercase dot-title">ux/ui design</h3>
-                                </a>
-                            </div>
-                        </article>
-                        <!-- single item -->
-                        <article class="blog-box blog-item">
-                            <!-- thumb -->
-                            <div class="thumbnail">
-                                <a href="#" class="text-decoration-none" title="blog title">
-                                    <img src="assets/img/thumb2.png" alt="post-thumbnail">
-                                </a>
-                            </div>
-                            <!-- title -->
-                            <div class="post-title">
-                                <a href="#" class="text-decoration-none">
-                                    <h2 class="text-uppercase">Creative approach </h2>
-                                </a>
-                            </div>
-                            <!-- reading time -->
-                            <div class="reading-time">
-                                <p>05 min</p>
-                            </div>
-                            <!-- category -->
-                            <div class="categories">
-                                <a href="#" class="text-decoration-none">
-                                    <h3 class="text-uppercase dot-title">ux/ui design</h3>
-                                </a>
-                            </div>
-                        </article>
-                        <!-- single item -->
-                        <article class="blog-box blog-item">
-                            <!-- thumb -->
-                            <div class="thumbnail">
-                                <a href="#" class="text-decoration-none" title="blog title">
-                                    <img src="assets/img/thumb1.png" alt="post-thumbnail">
-                                </a>
-                            </div>
-                            <!-- title -->
-                            <div class="post-title">
-                                <a href="#" class="text-decoration-none">
-                                    <h2 class="text-uppercase">Creative approach </h2>
-                                </a>
-                            </div>
-                            <!-- reading time -->
-                            <div class="reading-time">
-                                <p>05 min</p>
-                            </div>
-                            <!-- category -->
-                            <div class="categories">
-                                <a href="#" class="text-decoration-none">
-                                    <h3 class="text-uppercase dot-title">ux/ui design</h3>
-                                </a>
-                            </div>
-                        </article>
-                        <!-- single item -->
-                        <article class="blog-box blog-item">
-                            <!-- thumb -->
-                            <div class="thumbnail">
-                                <a href="#" class="text-decoration-none" title="blog title">
-                                    <img src="assets/img/thumb2.png" alt="post-thumbnail">
                                 </a>
                             </div>
                             <!-- title -->
@@ -1022,14 +908,139 @@
                             </div>
                         </article>
                     </div>
-                    <!-- motion design -->
-                    <div id="motiondesign" class="blog-details">
+                    <!-- motiondesign -->
+                    <div class="motiondesign mix blog-details">
+                        <!-- single item -->
+                        <article class="blog-box blog-item">
+                            <!-- thumb -->
+                            <div class="thumbnail">
+                                <a href="#" class="text-decoration-none" title="blog title">
+                                    <img src="assets/img/thumb2.png" alt="post-thumbnail">
+                                </a>
+                            </div>
+                            <!-- title -->
+                            <div class="post-title">
+                                <a href="#" class="text-decoration-none">
+                                    <h2 class="text-uppercase">Creative approach </h2>
+                                </a>
+                            </div>
+                            <!-- reading time -->
+                            <div class="reading-time">
+                                <p>05 min</p>
+                            </div>
+                            <!-- category -->
+                            <div class="categories">
+                                <a href="#" class="text-decoration-none">
+                                    <h3 class="text-uppercase dot-title">ux/ui design</h3>
+                                </a>
+                            </div>
+                        </article>
+                        <!-- single item -->
+                        <article class="blog-box blog-item">
+                            <!-- thumb -->
+                            <div class="thumbnail">
+                                <a href="#" class="text-decoration-none" title="blog title">
+                                    <img src="assets/img/thumb2.png" alt="post-thumbnail">
+                                </a>
+                            </div>
+                            <!-- title -->
+                            <div class="post-title">
+                                <a href="#" class="text-decoration-none">
+                                    <h2 class="text-uppercase">Creative approach </h2>
+                                </a>
+                            </div>
+                            <!-- reading time -->
+                            <div class="reading-time">
+                                <p>05 min</p>
+                            </div>
+                            <!-- category -->
+                            <div class="categories">
+                                <a href="#" class="text-decoration-none">
+                                    <h3 class="text-uppercase dot-title">ux/ui design</h3>
+                                </a>
+                            </div>
+                        </article>
                         <!-- single item -->
                         <article class="blog-box blog-item">
                             <!-- thumb -->
                             <div class="thumbnail">
                                 <a href="#" class="text-decoration-none" title="blog title">
                                     <img src="assets/img/thumb1.png" alt="post-thumbnail">
+                                </a>
+                            </div>
+                            <!-- title -->
+                            <div class="post-title">
+                                <a href="#" class="text-decoration-none">
+                                    <h2 class="text-uppercase">Creative approach </h2>
+                                </a>
+                            </div>
+                            <!-- reading time -->
+                            <div class="reading-time">
+                                <p>05 min</p>
+                            </div>
+                            <!-- category -->
+                            <div class="categories">
+                                <a href="#" class="text-decoration-none">
+                                    <h3 class="text-uppercase dot-title">ux/ui design</h3>
+                                </a>
+                            </div>
+                        </article>
+                        <!-- single item -->
+                        <article class="blog-box blog-item">
+                            <!-- thumb -->
+                            <div class="thumbnail">
+                                <a href="#" class="text-decoration-none" title="blog title">
+                                    <img src="assets/img/thumb2.png" alt="post-thumbnail">
+                                </a>
+                            </div>
+                            <!-- title -->
+                            <div class="post-title">
+                                <a href="#" class="text-decoration-none">
+                                    <h2 class="text-uppercase">Creative approach </h2>
+                                </a>
+                            </div>
+                            <!-- reading time -->
+                            <div class="reading-time">
+                                <p>05 min</p>
+                            </div>
+                            <!-- category -->
+                            <div class="categories">
+                                <a href="#" class="text-decoration-none">
+                                    <h3 class="text-uppercase dot-title">ux/ui design</h3>
+                                </a>
+                            </div>
+                        </article>
+                        <!-- single item -->
+                        <article class="blog-box blog-item">
+                            <!-- thumb -->
+                            <div class="thumbnail">
+                                <a href="#" class="text-decoration-none" title="blog title">
+                                    <img src="assets/img/thumb1.png" alt="post-thumbnail">
+                                </a>
+                            </div>
+                            <!-- title -->
+                            <div class="post-title">
+                                <a href="#" class="text-decoration-none">
+                                    <h2 class="text-uppercase">Creative approach </h2>
+                                </a>
+                            </div>
+                            <!-- reading time -->
+                            <div class="reading-time">
+                                <p>05 min</p>
+                            </div>
+                            <!-- category -->
+                            <div class="categories">
+                                <a href="#" class="text-decoration-none">
+                                    <h3 class="text-uppercase dot-title">ux/ui design</h3>
+                                </a>
+                            </div>
+                        </article>
+                        <!-- single item -->
+                        <article class="blog-box blog-item">
+                            <!-- thumb -->
+                            <div class="thumbnail">
+                                <a href="#" class="text-decoration-none" title="blog title">
+                                    <img src="assets/img/thumb2.png" alt="post-thumbnail">
                                 </a>
                             </div>
                             <!-- title -->
@@ -1155,15 +1166,16 @@
     <script src="assets/js/jquery-3.7.0.min.js"></script>
     <script src="assets/js/jquery-ui.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/mixitup.min.js"></script>
     <script src="assets/js/custom.js"></script>
     <script>
         // preloader
-        // let preloader = document.getElementById('witl_preloader');
-        // window.addEventListener("load", function(){
-        //     preloader.style.display = "none";
-        // });
+        let preloader = document.getElementById('preloader');
+        window.addEventListener("load", function(){
+            preloader.style.display = "none";
+        });
 
-   
 
         
     </script>

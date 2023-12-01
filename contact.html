@@ -15,12 +15,15 @@
     <link rel="stylesheet" href="assets/css/all.min.css">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/slick.min.css">
     <link rel="stylesheet" href="assets/css/custom.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- preloader -->
-    <div id="preloader"></div>
+    <div id="preloader">
+        <img src="assets/img/favicon.png" alt="preloader-image">
+    </div>
     
     <!-- =========================
         Header Area Start
@@ -227,13 +230,14 @@
     <script src="assets/js/jquery-3.7.0.min.js"></script>
     <script src="assets/js/jquery-ui.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
     <script src="assets/js/custom.js"></script>
     <script>
         // preloader
-        // let preloader = document.getElementById('witl_preloader');
-        // window.addEventListener("load", function(){
-        //     preloader.style.display = "none";
-        // });
+        let preloader = document.getElementById('preloader');
+        window.addEventListener("load", function(){
+            preloader.style.display = "none";
+        });
 
    
 

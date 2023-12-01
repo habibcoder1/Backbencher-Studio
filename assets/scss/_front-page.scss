@@ -151,10 +151,35 @@
         }
         .hero-airplane{
             img{
+                animation: airplaneAnimation 6s  linear 2s infinite;
+                -webkit-animation: airplaneAnimation 6s  linear 2s infinite;
                 @media(max-width: 768px){
                     height: 150px;
                     width: 200px;
                     margin: 10px auto;
+                }
+            }
+            @keyframes airplaneAnimation {
+                0%{
+                    transform: translateY(0%);
+                    -webkit-transform: translateY(0%);
+                    -moz-transform: translateY(0%);
+                    -ms-transform: translateY(0%);
+                    -o-transform: translateY(0%);
+                }
+                50%{
+                    transform: translateY(-270%) translateX(180%);
+                    -webkit-transform: translateY(-270%) translateX(180%);
+                    -moz-transform: translateY(-270%) translateX(180%);
+                    -ms-transform: translateY(-270%) translateX(180%);
+                    -o-transform: translateY(-270%) translateX(180%);
+                }
+                100%{
+                    transform: translateY(-580%) translateX(360%);
+                    -webkit-transform: translateY(-580%) translateX(360%);
+                    -moz-transform: translateY(-580%) translateX(360%);
+                    -ms-transform: translateY(-580%) translateX(360%);
+                    -o-transform: translateY(-580%) translateX(360%);
                 }
             }
         }
@@ -242,12 +267,6 @@
 
 // hero video
 .hero_video-area{
-    
-    // .contaiadner{
-    //     width: 85%;
-    //     margin: auto;
-    // }
-
     padding: 80px 0 100px 0;
     position: relative;
     .hero-video{
@@ -269,7 +288,7 @@
     }
 
     // custom cursor       
-    .custom-cursor {
+    .custom-cursor{
         position: absolute;
         top: 50%;
         left: 50%;

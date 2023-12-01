@@ -16,44 +16,65 @@
         menuCloseIcon.addEventListener('click', function(){
             mainMenu.classList.remove('bbsmenu-show');
         });
-        // Smoothly open the menu when the page loads
-        // document.addEventListener('DOMContentLoaded', function () {
-        //     mainMenu.style.transition = 'transform 0.8s ease-in-out';
-        //     mainMenu.classList.add('bbsmenu-show');
-        // });
-        
+
+
         /* ===============
-            All Tabs
+            Blog Slider
         =============== */
-        jQuery('.blog_tab-area .category_blog-tab').tabs();
+        const blogSlider = jQuery('.blog-slider');
+        jQuery(blogSlider).slick({
+            autoplay: true,
+            autoplaySpeed: 3000,
+            infinite: true,
+            speed: 800,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: false,
+            focusOnSelect: true,
+            pauseOnHover: false,
+        });
+        // Update counter text
+        function updateCounter(slick, currentIndex) {
+            let currentSlide = slick.slickCurrentSlide() + 1;
+            let totalSlides  = slick.slideCount;
+            // for 0 before count
+            let formattedCurrentSlide = currentSlide < 10 ? '0' + currentSlide : currentSlide;
+            let formattedTotalSlide = totalSlides < 10 ? '0' + totalSlides : totalSlides;
 
-        /* =======================================
-            for custom cursor in video section  (will load exact page //home page)
-        ======================================= */
-        const heroVideoSec    = document.querySelector(".hero_video-area");
-        const customCursor = document.querySelector(".custom-cursor"); 
-    
-        heroVideoSec.addEventListener("mouseenter", function () {
-            customCursor.style.display = "block";
-            // document.body.style.overflow = "hidden"; //Hide scrollbars when the video is hovered
+            jQuery('.current-slide').text(formattedCurrentSlide);
+            jQuery('.total-slides').text(formattedTotalSlide);
+        };
+        // Initialize counter
+        jQuery(blogSlider).on('init reInit afterChange', function (event, slick, currentSlide) {
+            updateCounter(slick, currentSlide);
         });
-    
-        heroVideoSec.addEventListener("mouseleave", function () {
-            customCursor.style.display = "none";
-            document.body.style.overflow = "visible"; //Show scrollbars when the video is not hovered
+
+
+        // progress bar
+        var progressBar = $('.progress_bar');
+        blogSlider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+            var percent = (nextSlide / (slick.slideCount - 1)) * 100;
+            progressBar.css('width', percent + '%');
         });
-    
-        heroVideoSec.addEventListener("mousemove", function (e) {
-            const x = e.clientX;
-            const y = e.clientY;
-        
-            customCursor.style.left = x + "px";
-            customCursor.style.top = y + "px";
+        blogSlider.on('afterChange', function (event, slick, currentSlide) {
+            progressBar.css('width', '0%');
         });
 
         
-        
-       
+       /* ==================
+            Blog Mixitup
+        ================== */
+        var mixer = mixitup('.allblog-items');
+        /* var mixer = mixitup(containerEl);
+        var mixer = mixitup(containerEl, {
+            selectors: {
+                target: '.blog-item',
+            },
+            animation: {
+                duration: 5000,
+            },
+        }); */
         
 
     });

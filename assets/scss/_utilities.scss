@@ -390,3 +390,42 @@ html,
 body{
     scroll-behavior: smooth;
 }
+
+// preloader
+#preloader{
+    background-color: $bbsWhiteColor;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 110;
+    img{
+        height: 40px;
+        width: 40px;
+        animation: preLoader 3s linear infinite;
+        -webkit-animation: preLoader 3s linear infinite;
+    }
+    @keyframes preLoader{
+        0% { 
+            transform: rotate(0deg); 
+            -webkit-transform: rotate(0deg); 
+            -moz-transform: rotate(0deg);
+            -ms-transform: rotate(0deg); 
+            -o-transform: rotate(0deg); 
+        }
+        100% {
+            transform: rotate(360deg);
+            -webkit-transform: rotate(360deg);
+            -moz-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+            -o-transform: rotate(360deg);
+        }
+    }
+}
+
+// green color for title
+.bbs-greencolor{
+    color: #50B800;
+}

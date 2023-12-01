@@ -15,12 +15,15 @@
     <link rel="stylesheet" href="assets/css/all.min.css">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/slick.min.css">
     <link rel="stylesheet" href="assets/css/custom.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- preloader -->
-    <div id="preloader"></div>
+    <div id="preloader">
+        <img src="assets/img/favicon.png" alt="preloader-image">
+    </div>
     
     <!-- =========================
         Header Area Start
@@ -387,13 +390,14 @@
     <script src="assets/js/jquery-3.7.0.min.js"></script>
     <script src="assets/js/jquery-ui.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
     <script src="assets/js/custom.js"></script>
     <script>
         // preloader
-        // let preloader = document.getElementById('witl_preloader');
-        // window.addEventListener("load", function(){
-        //     preloader.style.display = "none";
-        // });
+        let preloader = document.getElementById('preloader');
+        window.addEventListener("load", function(){
+            preloader.style.display = "none";
+        });
 
         /* ============================
             Video with js fullscreen
@@ -431,43 +435,6 @@
             });
             
         });
-
-        /* ===================================================
-            Video with specific width (used wrong container)
-        =================================================== */
-        // document.addEventListener("DOMContentLoaded", function (){
-        //     let heroVideo = document.getElementById("heroVideo");
-        //     let kicu = document.querySelector('.contaiadner');
-        //     let isPlaying = false;
-
-        //     heroVideo.addEventListener("mouseenter", function () {
-        //         if (!isPlaying) {
-        //             isPlaying = true;
-        //             heroVideo.play()
-        //                 .then(() => {
-        //                     // Set a specific width for the video (e.g., 500px)
-        //                     kicu.style.width = "100%";
-        //                     kicu.style.height = "100%";
-        //                     kicu.style.border = "2px solid gray";
-        //                 })
-        //                 .catch(error => {
-        //                     console.error("Error playing video:", error);
-        //                 });
-        //         }
-        //     });
-
-        //     heroVideo.addEventListener("mouseleave", function () {
-        //         if (isPlaying) {
-        //             isPlaying = false;
-        //             heroVideo.pause();
-        //             // Reset the width to its original value
-        //             kicu.style.width = "85%";
-        //             kicu.style.height = "auto";
-        //             kicu.style.border = "none";
-        //         }
-        //     });
-
-        // });
 
 
         
