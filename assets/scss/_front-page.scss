@@ -703,6 +703,7 @@
             -o-border-radius: 100px;
             border-right: 6px solid #202123;
             border-bottom: 4px solid #202123;
+            z-index: 1;
             @media(max-width: 1200px) {
                 height:100px;
                 width: 100px;

@@ -333,6 +333,10 @@ textarea:focus{
                 &:hover{
                     color: $bbsPrimaryColor;
                 }
+                @media(max-width: 1400px){
+                    font-size: 50px;
+                    letter-spacing: -1.42px;
+                }
                 @media(max-width: 992px){
                     font-size: 40px;
                     letter-spacing: 0;
@@ -393,9 +397,13 @@ textarea:focus{
                         width: 18px;
                     }
                 }
-                @media(max-width: 1200px){
+                @media(max-width: 1400px){
                     font-size: 30px;
-                    letter-spacing: -1px;
+                    letter-spacing: -1.42px;
+                }
+                @media(max-width: 1200px){
+                    font-size: 25px;
+                    letter-spacing: 0;
                 }
                 @media(max-width: 992px){
                     font-size: 20px;
@@ -415,6 +423,8 @@ textarea:focus{
 #preloader{
     background-color: $bbsWhiteColor;
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -443,6 +453,67 @@ textarea:focus{
             -o-transform: rotate(360deg);
         }
     }
+}
+
+// scroll top
+.bbsscroll_top{
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    @media(max-width: 768px){
+        display: none;
+    }
+    .scroll-icon{
+        i{
+            color: $bbsWhiteColor;
+            cursor: pointer;
+            font-size: 25px;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background: $bbsPrimaryColor;
+            padding: 5px;
+            text-align: center;
+            line-height: 1.6em;
+            transition: .5s ease all;
+            -webkit-transition: .5s ease all;
+            -moz-transition: .5s ease all;
+            -ms-transition: .5s ease all;
+            -o-transition: .5s ease all;
+            &:hover{
+                background-color: $bbsSecondaryColor;
+                color: $bbsBlackColor;
+            }
+        }
+    }
+}
+
+// sticky menu
+.header-area.sticky-menu{
+    margin-top: -60px;
+    transition: .5s ease all;
+    -webkit-transition: .5s ease all;
+    -moz-transition: .5s ease all;
+    -ms-transition: .5s ease all;
+    -o-transition: .5s ease all;
+}
+.header-area.sticky-menu.bbs_sticky-menu{
+    margin-top: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: block !important;
+    padding: 10px 0;
+    background: rgba(255,255,255,255);
+    transition: .5s ease all;
+    -webkit-transition: .5s ease all;
+    -o-transition: .5s ease all;
+    -moz-transition: .5s ease all;
+    -ms-transition: .5s ease all;
+    -webkit-box-shadow: 0 3px 18px $bbsBlackColor;
+    box-shadow: 0 0px 18px #818691;
+    z-index: 10;
 }
 
 // green color for title

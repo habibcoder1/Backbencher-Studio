@@ -5,9 +5,9 @@
         /* ======================
             menu hide show
         ====================== */
-        let hambergerIcon = document.querySelector('.hambergur-icon i');
-        let menuCloseIcon = document.querySelector('.logo-close_icon .close-icon i');
-        let mainMenu      = document.querySelector('.manu-address_area');
+        let hambergerIcon = document.querySelectorAll('.hambergur-icon i');
+        let menuCloseIcon = document.querySelectorAll('.logo-close_icon .close-icon i');
+        let mainMenu      = document.querySelectorAll('.manu-address_area');
 
         jQuery(hambergerIcon).click(function(){
             jQuery(mainMenu).slideDown(300); //300 slidedown
@@ -16,7 +16,46 @@
         jQuery(menuCloseIcon).click(function(){
             jQuery(mainMenu).slideUp(300); //300 slideup
         });
+
+        /* ===========================
+            Sticky Header by JS
+        =========================== */
+        window.addEventListener("scroll", function () {
+            let stickyHeader = document.querySelector(".header-area");
+            // check for mobile version
+            if (window.innerWidth > 768) {
+                stickyHeader.classList.toggle("bbs_sticky-menu", window.scrollY > 100);
+            } else {
+                stickyHeader.classList.remove("bbs_sticky-menu");
+            }
+        });
         
+
+        /* ===========================
+            Scroll To Top 
+        =========================== */
+        jQuery('.bbsscroll_top').hide();
+        jQuery(window).scroll(function(){
+            if (jQuery(window).scrollTop()>300) {
+                jQuery('.bbsscroll_top').fadeIn();
+            }
+            else{
+                jQuery('.bbsscroll_top').fadeOut();
+            }
+        });
+
+        jQuery('.bbsscroll_top i').click(function(){
+            jQuery('html,body').animate({scrollTop:0}, 180);
+            return false;
+        });
+
+        /* ===========================
+            Tooltip for Scroll Top
+        =========================== */
+        let scrollTooltip = document.querySelector('.bbsscroll_top');
+        let tooltip   = new bootstrap.Tooltip(scrollTooltip, {
+            boundary: document.body
+        });
         
         /* ===============
             Blog Slider
@@ -46,19 +85,26 @@
         /* ========================
             About Service Slider
         ======================== */
-        jQuery('.aboutservice-slider ul').slick({
-            autoplay: true,
-            autoplaySpeed: 3000,
-            infinite: true,
-            speed: 800,
-            centerPadding: '10px',
-            slidesToShow: 6,
-            slidesToScroll: 1,
-            arrows: false,
-            dots: false,
-            pauseOnHover: false,
-            vertical: true, 
-            verticalSwiping: true,
+        var swiper = new Swiper(".aboutservice-slider", {
+            direction: "vertical",
+            spaceBetween: 30,
+            loop: true,
+            centeredSlides: true,
+            slidesPerView: 6,
+            speed: 500,
+            autoplay:{
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                // here count min-width
+                300:{
+                    spaceBetween: 20,
+                },
+                768:{
+                    spaceBetween: 30,
+                },
+            },
         });
         
         /* ========================
@@ -74,22 +120,13 @@
             arrows: false,
             dots: false,
             pauseOnHover: false,
-        });
-
+        });        
         
        /* ==================
             Blog Mixitup (only load which page will set mixitup)
         ================== */
         var mixer = mixitup('.allblog-items');
-        /* var mixer = mixitup(containerEl);
-        var mixer = mixitup(containerEl, {
-            selectors: {
-                target: '.blog-item',
-            },
-            animation: {
-                duration: 5000,
-            },
-        }); */
+
 
         
         
