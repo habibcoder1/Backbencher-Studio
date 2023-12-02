@@ -26,6 +26,13 @@ $bbsExtraBoldWeight: 800;
 body{
     font-family: $bbsFontFamily;
 }
+
+// smoth scroll
+html,
+body{
+    scroll-behavior: smooth;
+}
+
 *::after,
 *::before{
     box-sizing: border-box;
@@ -40,22 +47,37 @@ h1{
 h2{
     font-size: 35px;
     font-weight: $bbsBoldWeight;
+    @media(max-width: 992px){
+        font-size: 30px;
+    }
 }
 h3{
     font-size: 30px;
     font-weight: $bbsBoldWeight;
+    @media(max-width: 992px){
+        font-size: 25px;
+    }
 }
 h4{
     font-size: 26px;
     font-weight: $bbsBoldWeight;
+    @media(max-width: 992px){
+        font-size: 22px;
+    }
 }
 h5{
     font-size: 24px;
     font-weight: $bbsBoldWeight;
+    @media(max-width: 992px){
+        font-size: 20px;
+    }
 }
 h6{
     font-size: 22px;
     font-weight: $bbsBoldWeight;
+    @media(max-width: 992px){
+        font-size: 18px;
+    }
 }
 a{
     display: inline-block;
@@ -79,6 +101,7 @@ li{
 hr{
     border-top-width: 2px;
     border-color: $bbsAshColor;
+    margin: 0;
 }
 img{
     display: block;
@@ -183,7 +206,6 @@ textarea:focus{
 }
 
 // browser scrollbar
-
 ::-webkit-scrollbar {
     width: 15px;
     z-index: 9999
@@ -204,7 +226,6 @@ textarea:focus{
     -ms-border-radius: 5px;
     -o-border-radius: 5px
 }
-
 
 // D word design
 .digital-ddesign{
@@ -317,7 +338,7 @@ textarea:focus{
                     letter-spacing: 0;
                 }
                 @media(max-width: 450px){
-                    font-size: 35px;
+                    font-size: 30px;
                     letter-spacing: 0;
                 }
             }
@@ -385,10 +406,9 @@ textarea:focus{
     }
 }
 
-// smoth scroll
-html,
-body{
-    scroll-behavior: smooth;
+// menu show
+.bbsmenu-show{
+    display: block !important;
 }
 
 // preloader
@@ -429,3 +449,4 @@ body{
 .bbs-greencolor{
     color: #50B800;
 }
+  

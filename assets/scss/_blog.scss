@@ -81,6 +81,9 @@
                 }
                 .blog-title{
                     margin: 60px 0 40px;
+                    @media(max-width: 768px){
+                        margin: 40px 0 30px;
+                    }
                     a{
                         text-decoration: none;
                         h2{
@@ -145,26 +148,67 @@
         
     }
 
-    // slick slider style
-    .slick-counter{
-        color: $bbsWhiteColor;
+    // swiper slider
+    .swiper{
+        overflow: visible;
+        overflow-y: unset;
+        overflow-x: clip;
+    }  
+    .swiper-pagination{
         font-size: 30px;
-        width: 45px;
+        width: 80px;
         position: absolute;
-        bottom: 40%;
-        right: 0;
-        span{
-            color: $bbsWhiteColor;
-            font-size: 30px;
-            &:last-child{
-                border-top: 2px solid $bbsWhiteColor;
-                padding-top: 3px;
-            }
+        top: 50%;
+        right: 18px;
+        left: auto;
+        bottom: auto;
+        transform: translateY(-50%);
+        color: $bbsWhiteColor;
+        @media(max-width: 992px){
+            top: 35%;
+        }
+        @media(max-width: 768px){
+            display: none;
         }
     }
-    .slick-list{
-        overflow-x: clip !important;
-        overflow-y: initial;
+    .swiper-pagination span{
+        font-size: 30px;
+        color: $bbsWhiteColor;
+    }
+    .autoplay-progress{
+        position: absolute;
+        right: 0;
+        top: 50%;
+        z-index: 10;
+        width: 120px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        color: red;
+        transform: translateY(-50%);
+        @media(max-width: 992px){
+            top: 35%;
+        }
+        @media(max-width: 768px){
+            display: none;
+        }
+    }
+    .autoplay-progress svg{
+        --progress: 0;
+        position: absolute;
+        left: 0;
+        top: 0px;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        stroke-width: 2px;
+        stroke: $bbsSecondaryColor;
+        fill: none;
+        stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+        stroke-dasharray: 125.6;
+        transform: rotate(-90deg);
     }
 }
 
@@ -185,7 +229,8 @@
                 font-size: 25px;
                 font-weight: 500;
                 letter-spacing: -0.7px;
-                padding: 10px 40px;
+                padding: 10px 38px;
+                margin-bottom: 15px;
                 cursor: pointer;
                 border-radius: 50px;
                 -webkit-border-radius: 50px;
@@ -245,9 +290,9 @@
             
         }
     }
-
     
 }
+
 
 .progress-bar-container {
     position: absolute;
@@ -256,9 +301,9 @@
     width: 100%;
     height: 5px;
     background-color: #ddd;
-  }
-  .progress_bar{
+}
+.progress_bar{
     height: 100%;
     background-color: #4CAF50;
     transition: width 0.3s;
-  }
+}

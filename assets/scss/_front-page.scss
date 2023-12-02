@@ -1,6 +1,6 @@
 // front page style
 .hero-area{
-    background-image: url('../img/hero-line.svg');
+    background-image: url('../img/hero-line.png');
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center center;
@@ -157,6 +157,8 @@
                     height: 150px;
                     width: 200px;
                     margin: 10px auto;
+                    animation: none;
+                    -webkit-animation: none;
                 }
             }
             @keyframes airplaneAnimation {
@@ -243,10 +245,10 @@
         
     }
     .hero-title-icon{
-        animation:heroMarque 10s linear infinite;
-        -webkit-animation:heroMarque 10s linear infinite;
+        animation: heroMarque 10s linear infinite;
+        -webkit-animation: heroMarque 10s linear infinite;
         animation-play-state: running;
-    }   
+    }      
     @keyframes heroMarque{
         0%{
             transform: translate3d(100%, 0, 0);
@@ -267,6 +269,12 @@
 
 // hero video
 .hero_video-area{
+    
+    // .contaiadner{
+    //     width: 85%;
+    //     margin: auto;
+    // }
+
     padding: 80px 0 100px 0;
     position: relative;
     .hero-video{
@@ -288,7 +296,7 @@
     }
 
     // custom cursor       
-    .custom-cursor{
+    .custom-cursor {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -383,12 +391,46 @@
     padding: 100px 0;
     .workanimation-wrap{
         background: $bbsPrimaryColor;
-        overflow: hidden;
+        // overflow: hidden;
         transform: rotate(355deg);
         -webkit-transform: rotate(355deg);
         -moz-transform: rotate(355deg);
         -ms-transform: rotate(355deg);
         -o-transform: rotate(355deg);
+        &::before{
+            content: '';
+            width: 28px;
+            height: 0;
+            border-bottom: 178px solid $bbsPrimaryColor;
+            border-right: 20px solid transparent;
+            display: block;
+            clear: both;
+            position: absolute;
+            top: 0;
+            left: -14px;
+            z-index: -1;
+            bottom: 0;
+            @media(max-width: 768px){
+                border-bottom: 117px solid $bbsPrimaryColor;
+            }
+        }
+        &::after{
+            content: '';
+            width: 28px;
+            height: 0;
+            border-top: 178px solid $bbsPrimaryColor;
+            border-right: 20px solid transparent;
+            display: block;
+            clear: both;
+            position: absolute;
+            top: 0;
+            right: -14px;
+            z-index: -1;
+            bottom: 0;
+            @media(max-width: 768px){
+                border-top: 117px solid $bbsPrimaryColor;
+            }
+        }
     }
     .workanimation-items{
         display: flex;
@@ -408,12 +450,20 @@
                 letter-spacing: -12.75px;
                 text-transform: uppercase;
                 color: #fff;
-                margin-bottom: -14px;
+                margin-bottom: -3px;
+                @media(max-width: 768px){
+                    font-size: 100px;
+                    letter-spacing: -5.75px;
+                }
             }
             img{
                 width: 90px;
                 height: 90px;
                 display: inline-block;
+                @media(max-width: 768px){
+                    height: 80px;
+                    width: 80px;
+                }
             }
         }
     }
@@ -561,10 +611,17 @@
             }
             // author details
             .testimonial-authordetails{
+                @media(max-width: 768px){
+                    margin-left: 50px;
+                }
                 .author-img{
                     img{
                         height: 78px;
                         width: 78px;
+                        @media(max-width: 768px){
+                            height: 50px;
+                            width: 50px;
+                        }
                     }
                 }
                 .author-name{
@@ -574,6 +631,9 @@
                         line-height: normal;
                         letter-spacing: -1.33px;
                         margin-bottom: 0;
+                        @media(max-width: 768px){
+                            font-size: 30px;
+                        }
                     }
                 }
                 .author-position{
@@ -583,6 +643,9 @@
                         font-weight: 400;
                         line-height: normal;
                         letter-spacing: -0.98px;
+                        @media(max-width: 768px){
+                            font-size: 22px;
+                        }
                     }
                 }
                 .author-name,            
@@ -608,6 +671,12 @@
             }
             .testimonial-image{
                 flex-basis: 40%;
+                @media(max-width: 992px){
+                    margin-top: 50px;
+                }
+            }
+            @media(max-width: 992px){
+                display: block;
             }
         }
         .testicustom-cursor{
@@ -660,4 +729,5 @@
     }
     
 }
+
 

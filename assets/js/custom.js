@@ -6,59 +6,41 @@
             menu hide show
         ====================== */
         let hambergerIcon = document.querySelector('.hambergur-icon i');
-        let menuCloseIcon = document.querySelector('.close-icon i');
-        let mainMenu      = document.querySelector('.main-menu');
+        let menuCloseIcon = document.querySelector('.logo-close_icon .close-icon i');
+        let mainMenu      = document.querySelector('.manu-address_area');
 
-        hambergerIcon.addEventListener('click', function(){
-            mainMenu.classList.add('bbsmenu-show');
+        jQuery(hambergerIcon).click(function(){
+            jQuery(mainMenu).slideDown(300); //300 slidedown
+        });
+
+        jQuery(menuCloseIcon).click(function(){
+            jQuery(mainMenu).slideUp(300); //300 slideup
         });
         
-        menuCloseIcon.addEventListener('click', function(){
-            mainMenu.classList.remove('bbsmenu-show');
-        });
-
-
+        
         /* ===============
             Blog Slider
         =============== */
-        const blogSlider = jQuery('.blog-slider');
-        jQuery(blogSlider).slick({
-            autoplay: true,
-            autoplaySpeed: 4000,
-            infinite: true,
+        const progressCircle  = document.querySelector(".autoplay-progress svg");
+        var swiper = new Swiper(".blog-slider_details", {
+            spaceBetween: 30,
+            loop: true,
+            centeredSlides: true,
+            slidesPerView: 1,
             speed: 800,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-            dots: false,
-            focusOnSelect: true,
-            pauseOnHover: false,
-        });
-        // Update counter text
-        function updateCounter(slick, currentIndex) {
-            let currentSlide = slick.slickCurrentSlide() + 1;
-            let totalSlides  = slick.slideCount;
-            // for 0 before count
-            let formattedCurrentSlide = currentSlide < 10 ? '0' + currentSlide : currentSlide;
-            let formattedTotalSlide = totalSlides < 10 ? '0' + totalSlides : totalSlides;
-
-            jQuery('.current-slide').text(formattedCurrentSlide);
-            jQuery('.total-slides').text(formattedTotalSlide);
-        };
-        // Initialize counter
-        jQuery(blogSlider).on('init reInit afterChange', function (event, slick, currentSlide) {
-            updateCounter(slick, currentSlide);
-        });
-
-
-        // progress bar
-        var progressBar = $('.progress_bar');
-        blogSlider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-            var percent = (nextSlide / (slick.slideCount - 1)) * 100;
-            progressBar.css('width', percent + '%');
-        });
-        blogSlider.on('afterChange', function (event, slick, currentSlide) {
-            progressBar.css('width', '0%');
+            autoplay:{
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                type: "fraction",
+            },
+            on: {
+                autoplayTimeLeft(s, time, progress) {
+                progressCircle.style.setProperty("--progress", 1 - progress);
+                }
+            }
         });
 
         /* ========================
@@ -108,6 +90,10 @@
                 duration: 5000,
             },
         }); */
+
+        
+        
+       
         
 
     });

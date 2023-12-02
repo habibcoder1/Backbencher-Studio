@@ -1,8 +1,4 @@
-blog page slider (try swiper js thumbs gallery loop or slick slider or email check)
-Service Page Drag and Drop (same as video sec. hover on image & btn)
-marque animation unlimited
-
-
+blog page slider = Done
 Hero title D color will apply = Done
 contact form = Done
 apply form = Done
@@ -13,6 +9,7 @@ airplane animation = Done
 Mixitup for blog tab = Done
 About Page Slider = Done
 Home Page Slider Custom Cursor = Done
+Service Page Drag and Drop = Done
 
 
 What needs to include that folder::
